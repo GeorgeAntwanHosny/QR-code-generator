@@ -21,4 +21,4 @@
 
 - ### The page is responsive on different screen sizes.
 
-- ### Deploy the solution and [Demo URL]().
+- ### Deploy the solution and [Demo URL](https://qr-code-generator-nine-lilac.vercel.app/).
