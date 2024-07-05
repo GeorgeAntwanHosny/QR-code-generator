@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+$color_1: #F2F5F9;
+$color_2: #3662E3;
+$color_3: #111729;
+$color_4: #080a13;
+$color_5: #364153;
+$color_6: #4e80ee33;
+@mixin Outfit-font($weight:200){
+    font-family: "Outfit", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:$weight;
+    font-style: normal;
+}
+body{
+    
+    background-color: $color_3;
+     display: grid;
+     justify-items: center;
+     align-items: center;
+     height: 96vh;
+      
+    //  background-image: url(./images/bg-illustration.svg);
+    //  background-size: 857px 486px;
+    //  background-repeat: no-repeat;
+     
+}
+.bg-img{
+    position: fixed;
+    right: 10vw;
+    @media (max-width:642px) and (min-width:340px){
+        position: fixed;
+        right: -30vw;
+    }
+    @media (min-width:642px) and (max-width:1024px){
+        position: fixed;
+        right: -20vw;
+    }
+    
+    // justify-self: end;
+    // grid-row: 1;
+    // grid-column: 1;
+    // &>img{
+    //     width: 800px;
+    //     height: 615px;
+    // }
+}
+.generatorContainer{
+    grid-row: 1;
+    grid-column: 1;
+    width: 80vw;
+    height: 400px;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-template-rows: 100px 50px;
+    grid-auto-flow: row;
+    justify-items: center;
+    align-items: center;
+    @include Outfit-font(400);
+    &>div:last-child{
+        z-index: 999;
+        border:2px solid $color_2;
+        border-radius: 15px;
+        height: 45px;
+        width: 400px;
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: 1fr 100px;
+        padding: 5px;
+        background-color: $color_4;
+        @media (max-width:642px){
+            width: 80vw;
+        }
+        &>input{
+            background-color: $color_4;
+            border:none;
+            @include Outfit-font(400);
+            color: $color_1;
+            padding-left: 10px;
+        }
+        &>input::placeholder{
+            padding-left: 10px;
+        }
+        &>button{
+            @include Outfit-font(400);
+            background-color: $color_2;
+            color: $color_1;
+            border:none;
+            border-radius: 12px;
+            width: 100px;
+            height: 100%;
+            cursor: pointer;
+        }
+    }
+}
+#result_container{
+    display: none;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 100px 300px 160px ;
+    height: 96vh;  
+    .bg-img{
+        position: fixed;
+        right: 6%;
+        top:70px;
+        @media (max-width:642px) and (min-width:340px){
+            position: fixed;
+            right: -30vw;
+        }
+        @media (min-width:642px) and (max-width:1024px){
+            position: fixed;
+            right: -20vw;
+        }
+    }
+    #logo_image{ 
+        justify-self: start; 
+        position: fixed;
+        top:40px;
+        left: 80px
+    }
+    #Qr_code_result_container{
+        grid-row: 2/2;
+        grid-column: 1/1;
+    }
+    #qrcode{
+        width: 250px;
+        height: 250px;
+        background-color: $color_1;
+        border-radius: 25px;
+        text-align: center;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .big-circle{
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: $color_6;
+        grid-row: 2/2;
+        grid-column: 1/1;
+    }
+    &>div:last-child{
+        grid-column: 1/1;
+        grid-row: 3/3;
+        display: grid;
+        grid-auto-flow: column;
+        gap:35px;
+        button, a{
+            width: 180px;
+            height: 60px;
+            font-size: medium;
+            background-color: $color_2;
+            color:$color_1;
+            border:none;
+            border-radius: 15px;
+            cursor: pointer;
+            @include  Outfit-font(500);
+            i{
+                padding-left: 10px;
+            }
+        }
+        a{
+            text-decoration: none;
+            text-align: center;
+            align-content: center;
+        }
+    } 
+}

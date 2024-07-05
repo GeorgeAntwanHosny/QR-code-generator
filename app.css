@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+body {
+  background-color: #111729;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  height: 96vh;
+}
+
+.bg-img {
+  position: fixed;
+  right: 10vw;
+}
+@media (max-width: 642px) and (min-width: 340px) {
+  .bg-img {
+    position: fixed;
+    right: -30vw;
+  }
+}
+@media (min-width: 642px) and (max-width: 1024px) {
+  .bg-img {
+    position: fixed;
+    right: -20vw;
+  }
+}
+
+.generatorContainer {
+  grid-row: 1;
+  grid-column: 1;
+  width: 80vw;
+  height: 400px;
+  justify-self: center;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 100px 50px;
+  grid-auto-flow: row;
+  justify-items: center;
+  align-items: center;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.generatorContainer > div:last-child {
+  z-index: 999;
+  border: 2px solid #3662E3;
+  border-radius: 15px;
+  height: 45px;
+  width: 400px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 1fr 100px;
+  padding: 5px;
+  background-color: #080a13;
+}
+@media (max-width: 642px) {
+  .generatorContainer > div:last-child {
+    width: 80vw;
+  }
+}
+.generatorContainer > div:last-child > input {
+  background-color: #080a13;
+  border: none;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: #F2F5F9;
+  padding-left: 10px;
+}
+.generatorContainer > div:last-child > input::placeholder {
+  padding-left: 10px;
+}
+.generatorContainer > div:last-child > button {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #3662E3;
+  color: #F2F5F9;
+  border: none;
+  border-radius: 12px;
+  width: 100px;
+  height: 100%;
+  cursor: pointer;
+}
+
+#result_container {
+  display: none;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 100px 300px 160px;
+  height: 96vh;
+}
+#result_container .bg-img {
+  position: fixed;
+  right: 6%;
+  top: 70px;
+}
+@media (max-width: 642px) and (min-width: 340px) {
+  #result_container .bg-img {
+    position: fixed;
+    right: -30vw;
+  }
+}
+@media (min-width: 642px) and (max-width: 1024px) {
+  #result_container .bg-img {
+    position: fixed;
+    right: -20vw;
+  }
+}
+#result_container #logo_image {
+  justify-self: start;
+  position: fixed;
+  top: 40px;
+  left: 80px;
+}
+#result_container #Qr_code_result_container {
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+#result_container #qrcode {
+  width: 250px;
+  height: 250px;
+  background-color: #F2F5F9;
+  border-radius: 25px;
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+#result_container .big-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(78, 128, 238, 0.2);
+  grid-row: 2/2;
+  grid-column: 1/1;
+}
+#result_container > div:last-child {
+  grid-column: 1/1;
+  grid-row: 3/3;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 35px;
+}
+#result_container > div:last-child button, #result_container > div:last-child a {
+  width: 180px;
+  height: 60px;
+  font-size: medium;
+  background-color: #3662E3;
+  color: #F2F5F9;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+#result_container > div:last-child button i, #result_container > div:last-child a i {
+  padding-left: 10px;
+}
+#result_container > div:last-child a {
+  text-decoration: none;
+  text-align: center;
+  align-content: center;
+}
+
+/*# sourceMappingURL=app.css.map */
